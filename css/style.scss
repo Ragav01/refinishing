@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+$red:#F22;
+$black:#161616;
+$white:#ffffff;
+$light-gray:#ebebeb;
+$gray:#959595;
+
+$mobile:992px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}){
+        @content;
+    }
+}
+*{
+    box-sizing: border-box;
+   
+}
+*::selection {
+    background: $red; 
+    color: $white;
+  }
+*::-moz-selection {
+    background: $red;
+    color: $white;
+   
+  }
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x:hidden;
+
+    h1,h2,h5,ul,li,p{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        font-weight:600;
+
+        &:hover{
+           text-decoration: none;
+           
+        }
+    }
+    main{
+        height: 100vh;
+        width: 100vw;
+    }
+    section{
+        height: 100%;
+        width: 100%;
+        background: $light-gray;
+        padding:8% 0;
+    }
+
+    h1{
+        font-size: 4.5rem;
+        font-family: 'Bebas Neue', cursive;
+        color: $light-gray;
+        line-height: 4.5rem;
+        letter-spacing: 3px;
+    }
+    h2{
+        font-size: 3.5rem;
+        font-family: 'Bebas Neue', cursive;
+        color: $black;
+        line-height: 3.5rem;
+        letter-spacing:0;
+        font-weight: 500;
+    }
+    h3{
+        font-size: 3rem;
+        font-family: 'Bebas Neue', cursive;
+        color: $light-gray;
+        line-height: 2.5rem;
+        letter-spacing: 2px;
+    }
+    button{
+        border: none;
+
+        &:focus{
+            outline: none;
+        }
+    }
+    
+}
+
+.m-b{
+    margin-bottom: 50px;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin slash {
+    display: inline-block;
+    background-color: $red;
+    -moz-transform: skew(-20deg, 0deg);
+    -webkit-transform: skew(-20deg, 0deg);
+    -o-transform: skew(-20deg, 0deg);
+    -ms-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+}
+.p{
+    font-size: 14px;
+    color: $gray;
+    line-height: 1.8;
+    text-align: justify;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+.bg-slash{
+    height: 3.1rem;
+    width: 8px;
+    margin-left:8px;
+    @include slash();
+
+    @include mobile{
+        margin-left: 3px;
+    }
+}
+
+.md-slash{
+    height: 2.5rem;
+    width: 7px;
+    margin-left:8px;
+    @include slash();
+}
+.sm-slash{
+    height: 1.5rem;
+    width: 5px;
+    margin-left:5px;
+    @include slash();
+}
+
+#page-btn{
+    height: 50px;
+    width: 200px;
+    background: $red;
+    display: inline;
+    color:$white;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+#btn{
+    background:$red;
+    padding: 18px 25px;
+    color: $white;
+    text-transform: uppercase;
+}
+
+#dark-bg{
+    background: $black;
+}
+
+#nav{
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    padding: 0 0 0 10px;
+    border-bottom: 1px solid #464646;
+    font-size: 15px;
+    
+    @include mobile{
+        background: $black;
+        padding: 10px;
+    }
+
+    ul{
+        li{
+            padding-right: 40px;
+
+            @include mobile{
+               padding: 20px;
+               text-align: center;
+            }
+        }
+    }
+
+    #logo{
+        font-weight: 700;
+        color: $red;
+    }
+
+    a{  
+        font-weight: 400;
+        color: $white;
+    }
+
+}
+
+.slider{
+   
+    .cars{
+        position: absolute;
+        bottom: 8%;
+        img{
+            height: 70%;
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.landing-box{
+    position: absolute;
+    background-image: url("back.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    
+
+    @include mobile{
+        background-image: url("mb-back.jpg");
+    }
+    
+
+    .tittle-box{
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 10%;
+    }
+    
+    
+    .wrap-left{
+        width: 50%;
+        height: 100%;
+        float: left;
+        text-transform:uppercase;
+
+        @include mobile{
+            width: 100%;
+            float: none;
+            padding-top:150px ;
+        }
+
+        p{  
+            margin-bottom: .8rem;
+            display: inline-block;
+            color: &black;
+            background: $light-gray;
+            font-weight: 600;
+            padding: .1rem;
+            
+            @include mobile{
+                font-size: 12px;
+            }
+        }
+        a{
+            color: $light-gray;
+            &:hover i{
+                animation-name: push-arrow;
+                animation-duration: .5s;
+                animation-iteration-count: infinite;
+            }
+        }
+    }
+    .wrap-right{
+      width: 50%;
+      float: right;
+      text-align: right;
+
+        @include mobile{
+            display: none;
+        }
+
+      p{
+          color: $gray;
+          font-size: 13px;
+          text-transform: capitalize;
+      }
+    }
+}
+
+
+// LANDING END===============================================================================
+
+
+// CONTAINER-1
+
+    .description{
+        p{
+            font-size: 14px;
+            color: $gray;
+            line-height: 1.8;
+            text-align: justify;
+            padding-right: 50px;
+            padding-bottom: 50px;
+        }
+        a{
+            font-size: 13px;
+        }
+        
+        .des-img{
+            background-image: url("../img/Bugatti.jpg");
+            background-position: left;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            // background-size: ;
+            height: 100%;
+            width: 100%;
+
+            @include mobile{
+                display: none;
+            }
+        }
+    }
+
+// CONTAINER-1-END
+
+
+.service{
+   
+    .col-lg-5{
+        padding-right: 0 !important;
+
+        @include mobile{
+            padding-left: 0 !important;
+        }
+    }
+    .col-lg-7{
+        padding-left: 0 !important;
+
+        @include mobile{
+            padding-right: 0 !important;
+        }
+    }
+    h2{
+        color: $white;
+    }
+    ul li{
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 300;
+        font-size: 23px;
+        letter-spacing: 1px;
+        color: $gray;
+        padding: 25px 15px;
+        text-transform: uppercase;
+        transition: .2s ease;
+        cursor: pointer;
+
+        &:hover{
+            background: $red;
+            color: $white;
+        }
+        
+        span{
+            padding-right: 25px;
+        }
+       
+    }
+    .service-img{
+        height: 500px;
+        width: 100%;
+
+        img{
+            position: absolute;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+            animation-name: push-arrow;
+            animation-duration: .4s;
+        }
+        .img1,.img2,.img3,.img4,.img5{
+            display: none;
+            animation-name: push-up;
+            animation-duration: .4s;
+        }
+        .show{
+            display: block;
+        }
+    }
+}
+
+
+
+.project{
+
+    .project-img{
+        width: 100%;
+        height: 500px;
+        min-height: 500px;
+        img{
+            object-fit: cover;
+            height: 500px;
+            width: 100%;
+        } 
+    }
+    .slide-box{
+        position: absolute;
+        bottom: 0;
+        min-height:250px;
+        height: 250px;
+        width: 100%;
+        background: $white;
+
+        @include mobile(){
+            position: relative;
+        }
+    }
+    .slider{
+        h6{
+            display: inline-block;
+            margin: 20px;
+            padding: 5px;
+            background: $black;
+            color: $white;
+        }
+        p{
+            padding: 0px 100px 10px 20px;
+        }
+    }
+    .s-btn{
+        position: absolute;
+        bottom: 20px;
+       margin-left: 20px;
+
+        button{
+            height: 40px;
+            width: 40px;
+            background: none;
+            border: 2px solid $light-gray;
+            border-radius: 50%;
+            margin-right: 10px;
+            transition: .2s ease;
+            &:hover{
+                border: 2px solid $red;
+                color: $red;
+            } 
+        }
+        
+    }
+}
+
+
+
+// CONTAINER-2-END
+
+@keyframes push-up {
+    from {margin-top: 100px;}
+    to {margin-top: 0;}
+  }
+    
+@keyframes push-arrow {
+    from {margin-left: 0;}
+    to {margin-left: 10px;}
+  }

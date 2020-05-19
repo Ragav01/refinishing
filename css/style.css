@@ -1,0 +1,492 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background: #F22;
+  color: #ffffff;
+}
+
+*::selection {
+  background: #F22;
+  color: #ffffff;
+}
+
+*::-moz-selection {
+  background: #F22;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+}
+
+body h1, body h2, body h5, body ul, body li, body p {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+body a:hover {
+  text-decoration: none;
+}
+
+body main {
+  height: 100vh;
+  width: 100vw;
+}
+
+body section {
+  height: 100%;
+  width: 100%;
+  background: #ebebeb;
+  padding: 8% 0;
+}
+
+body h1 {
+  font-size: 4.5rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #ebebeb;
+  line-height: 4.5rem;
+  letter-spacing: 3px;
+}
+
+body h2 {
+  font-size: 3.5rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #161616;
+  line-height: 3.5rem;
+  letter-spacing: 0;
+  font-weight: 500;
+}
+
+body h3 {
+  font-size: 3rem;
+  font-family: 'Bebas Neue', cursive;
+  color: #ebebeb;
+  line-height: 2.5rem;
+  letter-spacing: 2px;
+}
+
+body button {
+  border: none;
+}
+
+body button:focus {
+  outline: none;
+}
+
+.m-b {
+  margin-bottom: 50px;
+}
+
+.p {
+  font-size: 14px;
+  color: #959595;
+  line-height: 1.8;
+  text-align: justify;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.bg-slash {
+  height: 3.1rem;
+  width: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #F22;
+  -webkit-transform: skew(-20deg, 0deg);
+  transform: skew(-20deg, 0deg);
+}
+
+@media (max-width: 992px) {
+  .bg-slash {
+    margin-left: 3px;
+  }
+}
+
+.md-slash {
+  height: 2.5rem;
+  width: 7px;
+  margin-left: 8px;
+  display: inline-block;
+  background-color: #F22;
+  -webkit-transform: skew(-20deg, 0deg);
+  transform: skew(-20deg, 0deg);
+}
+
+.sm-slash {
+  height: 1.5rem;
+  width: 5px;
+  margin-left: 5px;
+  display: inline-block;
+  background-color: #F22;
+  -webkit-transform: skew(-20deg, 0deg);
+  transform: skew(-20deg, 0deg);
+}
+
+#page-btn {
+  height: 50px;
+  width: 200px;
+  background: #F22;
+  display: inline;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+#btn {
+  background: #F22;
+  padding: 18px 25px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+#dark-bg {
+  background: #161616;
+}
+
+#nav {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  padding: 0 0 0 10px;
+  border-bottom: 1px solid #464646;
+  font-size: 15px;
+}
+
+@media (max-width: 992px) {
+  #nav {
+    background: #161616;
+    padding: 10px;
+  }
+}
+
+#nav ul li {
+  padding-right: 40px;
+}
+
+@media (max-width: 992px) {
+  #nav ul li {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+#nav #logo {
+  font-weight: 700;
+  color: #F22;
+}
+
+#nav a {
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.slider .cars {
+  position: absolute;
+  bottom: 8%;
+}
+
+.slider .cars img {
+  height: 70%;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.landing-box {
+  position: absolute;
+  background-image: url("back.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .landing-box {
+    background-image: url("mb-back.jpg");
+  }
+}
+
+.landing-box .tittle-box {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10%;
+}
+
+.landing-box .wrap-left {
+  width: 50%;
+  height: 100%;
+  float: left;
+  text-transform: uppercase;
+}
+
+@media (max-width: 992px) {
+  .landing-box .wrap-left {
+    width: 100%;
+    float: none;
+    padding-top: 150px;
+  }
+}
+
+.landing-box .wrap-left p {
+  margin-bottom: .8rem;
+  display: inline-block;
+  color: .landing-box .wrap-left p black;
+  background: #ebebeb;
+  font-weight: 600;
+  padding: .1rem;
+}
+
+@media (max-width: 992px) {
+  .landing-box .wrap-left p {
+    font-size: 12px;
+  }
+}
+
+.landing-box .wrap-left a {
+  color: #ebebeb;
+}
+
+.landing-box .wrap-left a:hover i {
+  -webkit-animation-name: push-arrow;
+          animation-name: push-arrow;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.landing-box .wrap-right {
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+
+@media (max-width: 992px) {
+  .landing-box .wrap-right {
+    display: none;
+  }
+}
+
+.landing-box .wrap-right p {
+  color: #959595;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.description p {
+  font-size: 14px;
+  color: #959595;
+  line-height: 1.8;
+  text-align: justify;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+.description a {
+  font-size: 13px;
+}
+
+.description .des-img {
+  background-image: url("../img/Bugatti.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .description .des-img {
+    display: none;
+  }
+}
+
+.service .col-lg-5 {
+  padding-right: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .service .col-lg-5 {
+    padding-left: 0 !important;
+  }
+}
+
+.service .col-lg-7 {
+  padding-left: 0 !important;
+}
+
+@media (max-width: 992px) {
+  .service .col-lg-7 {
+    padding-right: 0 !important;
+  }
+}
+
+.service h2 {
+  color: #ffffff;
+}
+
+.service ul li {
+  font-family: 'Bebas Neue', cursive;
+  font-weight: 300;
+  font-size: 23px;
+  letter-spacing: 1px;
+  color: #959595;
+  padding: 25px 15px;
+  text-transform: uppercase;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.service ul li:hover {
+  background: #F22;
+  color: #ffffff;
+}
+
+.service ul li span {
+  padding-right: 25px;
+}
+
+.service .service-img {
+  height: 500px;
+  width: 100%;
+}
+
+.service .service-img img {
+  position: absolute;
+  height: 500px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation-name: push-arrow;
+          animation-name: push-arrow;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+}
+
+.service .service-img .img1, .service .service-img .img2, .service .service-img .img3, .service .service-img .img4, .service .service-img .img5 {
+  display: none;
+  -webkit-animation-name: push-up;
+          animation-name: push-up;
+  -webkit-animation-duration: .4s;
+          animation-duration: .4s;
+}
+
+.service .service-img .show {
+  display: block;
+}
+
+.project .project-img {
+  width: 100%;
+  height: 500px;
+  min-height: 500px;
+}
+
+.project .project-img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.project .slide-box {
+  position: absolute;
+  bottom: 0;
+  min-height: 250px;
+  height: 250px;
+  width: 100%;
+  background: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .project .slide-box {
+    position: relative;
+  }
+}
+
+.project .slider h6 {
+  display: inline-block;
+  margin: 20px;
+  padding: 5px;
+  background: #161616;
+  color: #ffffff;
+}
+
+.project .slider p {
+  padding: 0px 100px 10px 20px;
+}
+
+.project .s-btn {
+  position: absolute;
+  bottom: 20px;
+  margin-left: 20px;
+}
+
+.project .s-btn button {
+  height: 40px;
+  width: 40px;
+  background: none;
+  border: 2px solid #ebebeb;
+  border-radius: 50%;
+  margin-right: 10px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.project .s-btn button:hover {
+  border: 2px solid #F22;
+  color: #F22;
+}
+
+@-webkit-keyframes push-up {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes push-up {
+  from {
+    margin-top: 100px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes push-arrow {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+
+@keyframes push-arrow {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
